@@ -53,10 +53,10 @@ local timerMeteorCD					= mod:NewNextTimer(40, 74648, nil, nil, nil, 3)--Target 
 local timerMeteorCast				= mod:NewCastTimer(7, 74648, nil, nil, nil, 3)--7-8 seconds from boss yell the meteor impacts.
 local timerFlameBreathCD			= mod:NewCDTimer(12.1, 74525, nil, "Tank|Healer", nil, 5, nil, DBM_COMMON_L.TANK_ICON)--12.1-19.4
 
-mod:AddSetIconOption("SetIconOnFireConsumption", 74562, true, false, {7})--Red x for Fire
+mod:AddSetIconOption("SetIconOnFireConsumption", 74562, true, 0, {7})--Red x for Fire
 
 -- Stage Two - Twilight Realm (75%)
-local twilightRealmName = DBM:GetSpellInfo(74807)
+local twilightRealmName = DBM:GetSpellName(74807)
 mod:AddTimerLine(SCENARIO_STAGE:format(2)..": "..twilightRealmName)
 local warnPhase3Soon				= mod:NewPrePhaseAnnounce(3)
 local warnPhase2					= mod:NewPhaseAnnounce(2, 2, nil, nil, nil, nil, nil, 2)
@@ -74,10 +74,10 @@ local timerTwilightCutter			= mod:NewBuffActiveTimer(10, 74769, nil, nil, nil, 6
 local timerTwilightCutterCD			= mod:NewNextTimer(15, 74769, nil, nil, nil, 6)
 local timerDarkBreathCD				= mod:NewCDTimer(12.1, 74806, nil, "Tank|Healer", nil, 5, nil, DBM_COMMON_L.TANK_ICON)--12.1-19.4
 
-mod:AddSetIconOption("SetIconOnShadowConsumption", 74792, true, false, {3})--Purple diamond for shadow
+mod:AddSetIconOption("SetIconOnShadowConsumption", 74792, true, 0, {3})--Purple diamond for shadow
 
 -- Stage Three - Corporeality (50%)
-local twilightDivisionName = DBM:GetSpellInfo(75063)
+local twilightDivisionName = DBM:GetSpellName(75063)
 mod:AddTimerLine(SCENARIO_STAGE:format(3)..": "..twilightDivisionName)
 local warnPhase3					= mod:NewPhaseAnnounce(3, 2, nil, nil, nil, nil, nil, 2)
 
